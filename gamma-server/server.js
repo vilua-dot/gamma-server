@@ -15,7 +15,7 @@ app.use((req, res, next) => {
 // Жёстко заданные аккаунты
 const users = new Map([
   ["xKaratel", { passHash: bcrypt.hashSync("david2011", 8), hwid: null }],
-  ["6lua",     { passHash: bcrypt.hashSync("JastreerYT", 8), hwid: null }],
+  ["lua",     { passHash: bcrypt.hashSync("JastreerYT", 8), hwid: null }],
   ["Atopa", { passHash: bcrypt.hashSync("atopa2011", 8), hwid: null }],
 ]);
 
@@ -49,4 +49,5 @@ app.post("/auth", (req, res) => {
 });
 
 app.listen(PORT, () => console.log("auth server on", PORT));
+
 
